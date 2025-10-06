@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Wi-Fi Fingerprinting (Web)</title>
+  <!-- Leaflet CSS from CDN -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <!-- Your local CSS (use url_for) -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+</head>
+<body>
+  <div id="controls">
+    <label>Real map width (meters): <input id="realWidth" type="number" step="0.1" value="50" /></label>
+    <button id="setMap">Set Map</button>
+    <button id="inputRouters">Input Routers</button>
+    <button id="clearEst">Clear Estimates</button>
+  </div>
+  <div id="map"></div>
+
+  <!-- Leaflet JS from CDN -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <!-- Your local JS (use url_for) -->
+  <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>
